@@ -12,36 +12,8 @@ class Pensum extends CI_Controller{
 
 
 	public function index(){
-		//echo (json_encode($this->M->cargarDatosEstudiante("1065833705",4,5)));
-/*
-		$curl_handle = curl_init();
-
-
-		$username = 'admin';
-		$password = 'admin';
-
-		curl_setopt($curl_handle, CURLOPT_URL, 'http://localhost/pensum/Rest_server/test');
-		curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, 1);
-		curl_setopt($curl_handle, CURLOPT_POST, 1);
-		curl_setopt($curl_handle, CURLOPT_POSTFIELDS, array(
-			'$username' => "zeros",
-			'password' => "toor"
-		));
-
-		// Optional, delete this line if your API is open
-		curl_setopt($curl_handle, CURLOPT_USERPWD, $username . ':' . $password);
-
-		$buffer = curl_exec($curl_handle);
-		curl_close($curl_handle);
-
-		$result = json_decode($buffer);
-
-		print_r($result);
-
-*/
-
-	$this->load->view("rest_server");
-
+		echo json_encode($this->M->pensum(4)); //json_encode($this->M->cargarDatosEstudiante("1065833705",4,5));
+		//var_dump($this->M->pensum(5));
 	}
 
 	public function iniciarSession($usuario,$contraseña){

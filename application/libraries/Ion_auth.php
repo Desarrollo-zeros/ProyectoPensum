@@ -30,34 +30,24 @@ class Ion_auth {
 	}
 	public function jwt($datos = array()){
 
-
 		$tokenId    = base64_encode(mcrypt_create_iv(32));
 		$issuedAt   = time();
-		$notBefore  = $issuedAt + 10;             //Adding 10 seconds
-		$expire     = $notBefore + 60;            // Adding 60 seconds
-		$serverName = base_url(); // Retrieve the server name from config file
-
-
+		$notBefore  = $issuedAt + 10;             //se le agrega 10 segundo mas al tocket
+		$expire     = $notBefore + 60;            //tiempo de expiracion, en segundo(60) = 1min
+		$serverName = base_url(); // nombre del servidor..
 
 		$data = [
-			'iat'  => $issuedAt,         // Issued at: time when the token was generated
-			'jti'  => $tokenId,          // Json Token Id: an unique identifier for the token
-			'iss'  => $serverName,       // Issuer
-			'nbf'  => $notBefore,        // Not before
-			'exp'  => $expire,           // Expire
-			'data' => [                  // Data related to the signer user
+			'iat'  => $issuedAt,         // Tiempo generacion del tocket
+			'jti'  => $tokenId,          // identificador unico para el tocket
+			'iss'  => $serverName,       // server
+			'nbf'  => $notBefore,        // tiempo despues de creacion del tocket
+			'exp'  => $expire,           // tiempo de expiracion
+			'data' => [                  // array
 				$datos
 			]
 		];
-
 		$jwt = JWT::encode($data, $this->key);
 		return($jwt);
-
-		//$jwt =  'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9leGFtcGxlLm9yZyIsImF1ZCI6Imh0dHA6XC9cL2V4YW1wbGUuY29tIiwiaWF0IjoxMzU2OTk5NTI0LCJuYmYiOjEzNTcwMDAwMDB9.KcNaeDRMPwkRHDHsuIh1L2B01VApiu3aTOkWplFjoYI'; //JWT::encode($token, $key);
-		//$jwt = JWT::encode($token, $key);
-		//JWT::$leeway = 1; // $leeway in seconds
-		//$decoded = JWT::decode($jwt, $key, array('HS256'));
-		//var_dump($decoded);
 	}
 
 
@@ -78,17 +68,13 @@ class Ion_auth {
 			header('Access-Control-Allow-Credentials: true');
 			header('Access-Control-Max-Age: 86400');    // cache for 1 day
 		}
-
 		// Access-Control headers are received during OPTIONS requests
 		if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
-
 			if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_METHOD']))
 				// may also be using PUT, PATCH, HEAD etc
 				header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
-
 			if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']))
 				header("Access-Control-Allow-Headers: {$_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']}");
-
 			exit(0);
 		}
 	}

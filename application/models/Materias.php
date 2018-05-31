@@ -32,11 +32,11 @@ class Materias extends  CI_Model{
 		for($i=0;$i<count($ganadas);$i++){
 			for($j=0;$j<count($homologadas);$j++){
 				if($ganadas[$i]->idMateriaA == $homologadas[$j]->idMateriaA){
-					array_push($ganadasYhomologadas,array(
+					$ganadasYhomologadas[$i] = array(
 						"codigo" => $ganadas[$i]->codigo,
 						"nombre" => $ganadas[$i]->nombre,
 						"homologada" => array_filter($this->homologadasYganadas($homologadas,$homologadas[$j]->idMateriaA))
-					));
+					);
 				}
 			}
 		}
@@ -55,10 +55,8 @@ class Materias extends  CI_Model{
 			"materias" => array(
 				"ganadas" => $ganadasYhomologadas,
 				"perdidas" => ($perdidas1)
-			),
+			)
 		);
-
-
 		return ($data);
 	}
 
@@ -100,6 +98,22 @@ class Materias extends  CI_Model{
 								 inner join ESTUDIANTE e on e.idEstudiante = n.idEstudiante
 								 inner join PERSONA p on p.idPersona = e.idPersona
 								 where  p.cedula = '$cedula' and n.nota>=3.0 and e.idPensum = $idPensum order by vm.idMateria asc;")->result();
+	}
+
+
+	public function pensum($idPensum){
+		$query = $this->db->query("SELECT *FROM MATERIA WHERE idPensum = $idPensum")->result();
+		$pensum = array();
+		for($i = 1; $i<=10; $i++){
+			$ar = array();
+			foreach ($query as $row){
+				if($i == $row->semestre){
+					array_push($ar,$row);
+				}
+			}
+			$pensum[$i] = $ar;
+		}
+		return $pensum;
 	}
 
 	public function consultarMateriasPerdidas($cedula,$idPensum){

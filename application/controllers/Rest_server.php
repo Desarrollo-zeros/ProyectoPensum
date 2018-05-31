@@ -25,12 +25,21 @@ class Rest_server extends REST_Controller{
 
 
 	public function test_get(){
-		//$this->response(($this->Ion_auth->jwt($this->P->iniciarSession($this->get("u"),$this->get("p")))));
+		$this->response(($this->Ion_auth->jwt($this->P->iniciarSession($this->get("u"),$this->get("p")))));
 	}
-
 
 	public function test_post(){
-		//$this->response(($this->Ion_auth->jwt($this->P->iniciarSession($this->get("u"),$this->get("p")))));
+		$this->response((($this->P->iniciarSession($this->get("u"),$this->get("p")))));
 	}
+
+
+	public function login_post(){
+		$data = $this->Ion_auth->jwtDecode($this->post());
+	}
+
+	public function login_get(){
+	}
+
+
 
 }
