@@ -555,3 +555,5 @@ AddCharset utf-8 .atom .css .js .json .rss .vtt .xml
   php_value session.cookie_httponly true
   php_flag magic_quotes_gpc Off
 </IfModule>
+
+

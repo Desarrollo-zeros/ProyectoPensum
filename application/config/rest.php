@@ -184,6 +184,7 @@ $config['auth_library_function'] = 'get_hashed_password';
 // $config['auth_override_class_method']['accounts']['user'] = 'basic';
 // $config['auth_override_class_method']['dashboard']['*'] = 'basic';
 
+//$config['auth_override_class_method']['dashboard']['*'] = 'basic';
 
 // ---Uncomment list line for the wildard unit test
 // $config['auth_override_class_method']['wildcard_test_cases']['*'] = 'basic';
@@ -202,7 +203,7 @@ $config['auth_library_function'] = 'get_hashed_password';
 
 // ---Uncomment list line for the wildard unit test
 // $config['auth_override_class_method_http']['wildcard_test_cases']['*']['options'] = 'basic';
-
+$config['auth_override_class_method_http']['wildcard_test_cases']['*']['options'] = 'basic';
 /*
 |--------------------------------------------------------------------------
 | REST Login Usernames
@@ -229,7 +230,7 @@ $config['rest_valid_logins'] = array('admin' => 'admin',"zeros"=>"toor");
 |    restrict certain methods to IPs in your white-list
 |
 */
-$config['rest_ip_whitelist_enabled'] = FALSE;
+$config['rest_ip_whitelist_enabled'] = TRUE;
 
 /*
 |--------------------------------------------------------------------------
@@ -254,7 +255,7 @@ $config['rest_handle_exceptions'] = TRUE;
 | 127.0.0.1 and 0.0.0.0 are allowed by default
 |
 */
-$config['rest_ip_whitelist'] = '';
+$config['rest_ip_whitelist'] = '192.168.8.157';
 
 /*
 |--------------------------------------------------------------------------
@@ -535,7 +536,7 @@ $config['rest_ajax_only'] = FALSE;
 | Language file to load from the language directory
 |
 */
-$config['rest_language'] = 'english';
+$config['rest_language'] = 'spanish';
 
 /*
 |--------------------------------------------------------------------------
@@ -547,7 +548,7 @@ $config['rest_language'] = 'english';
 | will access it through a browser
 |
 */
-$config['check_cors'] = FALSE;
+$config['check_cors'] = TRUE;
 
 /*
 |--------------------------------------------------------------------------

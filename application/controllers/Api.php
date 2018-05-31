@@ -15,7 +15,8 @@ class Api extends REST_Controller{
 		parent::__construct();
 
 		$this->Ion_auth = new Ion_auth();
-		$this->Ion_auth->cors();
+		header("Access-Control-Allow-Origin: *");
+		//$this->Ion_auth->cors();
 		// Configure limits on our controller methods
 		// Ensure you have created the 'limits' table and enabled 'limits' within application/config/rest.php
 		$this->methods['users_get']['limit'] = 500; // 500 requests per hour per user/key
@@ -41,8 +42,8 @@ class Api extends REST_Controller{
 
 
 	public function login_get($usuario){
-		$this->Ion_auth->cors();
-		$this->reponse($usuario);
+		//$this->Ion_auth->cors();
+		//$this->reponse($usuario);
 	}
 
 }
