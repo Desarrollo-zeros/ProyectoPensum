@@ -36,12 +36,12 @@ class Api extends REST_Controller{
 
 	public function login_post(){
 		//$this->reponse($this->post("usuario"));
-		echo json_encode($this->post("usuario"));
+		//echo json_encode($this->post("usuario"));
 		//$data = $this->response((($this->P->iniciarSession())));
 	}
 
 
-	public function login_get($usuario){
+	public function login_get(){
 		//$this->Ion_auth->cors();
 		//$this->reponse($usuario);
 	}

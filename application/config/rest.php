@@ -203,7 +203,7 @@ $config['auth_library_function'] = 'get_hashed_password';
 
 // ---Uncomment list line for the wildard unit test
 // $config['auth_override_class_method_http']['wildcard_test_cases']['*']['options'] = 'basic';
-$config['auth_override_class_method_http']['wildcard_test_cases']['*']['options'] = 'basic';
+//$config['auth_override_class_method_http']['wildcard_test_cases']['*']['options'] = 'basic';
 /*
 |--------------------------------------------------------------------------
 | REST Login Usernames
@@ -255,7 +255,7 @@ $config['rest_handle_exceptions'] = TRUE;
 | 127.0.0.1 and 0.0.0.0 are allowed by default
 |
 */
-$config['rest_ip_whitelist'] = '192.168.8.157';
+$config['rest_ip_whitelist'] = '192.168.8.157, 192.168.8.168, 0.0.0.0, 127.0.0.1';
 
 /*
 |--------------------------------------------------------------------------

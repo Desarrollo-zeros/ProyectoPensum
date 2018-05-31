@@ -768,7 +768,6 @@ abstract class REST_Controller extends CI_Controller {
                 // They don't have good enough perms
                 $response = [$this->config->item('rest_status_field_name') => FALSE, $this->config->item('rest_message_field_name') => $this->lang->line('text_rest_api_key_permissions')];
                 $this->response($response, self::HTTP_UNAUTHORIZED);
-
                 $this->is_valid_request = false;
             }
         }
@@ -862,7 +861,6 @@ abstract class REST_Controller extends CI_Controller {
                 	{
                     	$data = $this->format->factory($data)->{'to_json'}();
                 	}
-
                 	// Format is not supported, so output the raw data as a string
                 	$output = $data;
             	}
@@ -1975,6 +1973,7 @@ abstract class REST_Controller extends CI_Controller {
 
         if ($password === FALSE)
         {
+        	//echo json_encode("mal");
             return FALSE;
         }
 
@@ -1988,7 +1987,7 @@ abstract class REST_Controller extends CI_Controller {
         if ($auth_source === 'library')
         {
             log_message('debug', "Performing Library authentication for $username");
-            return $this->_perform_library_auth($username, $password);
+            return ($this->_perform_library_auth($username, $password)) ? true : false;
         }
 
         if (array_key_exists($username, $valid_logins) === FALSE)
@@ -2000,7 +1999,6 @@ abstract class REST_Controller extends CI_Controller {
         {
             return FALSE;
         }
-
         return TRUE;
     }
 
@@ -2041,14 +2039,21 @@ abstract class REST_Controller extends CI_Controller {
         }
 
         // Returns NULL if the SERVER variables PHP_AUTH_USER and HTTP_AUTHENTICATION don't exist
-        $username = $this->input->server('PHP_AUTH_USER');
-        $http_auth = $this->input->server('HTTP_AUTHENTICATION') ?: $this->input->server('HTTP_AUTHORIZATION');
+      	//$username = empty($this->input->server('PHP_AUTH_USER')) ? $_SERVER['PHP_AUTH_USER'] : $this->input->server('PHP_AUTH_USER');
+
+		//var_dump($this->input->server());
+
+        $username  = $this->input->server('PHP_AUTH_USER');
+		$http_auth = $this->input->server('HTTP_AUTHENTICATION') ?: $this->input->server('HTTP_AUTHORIZATION');
+
+		//var_dump( $_SERVER["HTTP_AUTHENTICATION"]);
 
 
         $password = NULL;
         if ($username !== NULL)
         {
             $password = $this->input->server('PHP_AUTH_PW');
+
         }
         elseif ($http_auth !== NULL)
         {
@@ -2175,7 +2180,6 @@ abstract class REST_Controller extends CI_Controller {
 
         if (in_array($this->input->ip_address(), $whitelist) === FALSE)
         {
-        	echo $this->input->ip_address();
             $this->response([
                 $this->config->item('rest_status_field_name') => FALSE,
                 $this->config->item('rest_message_field_name') => $this->lang->line('text_rest_ip_unauthorized')
