@@ -7,7 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 require APPPATH . 'libraries/REST_Controller.php';
 require APPPATH . 'libraries/Ion_auth.php';
 
-class Rest_server extends REST_Controller{
+class Api extends REST_Controller{
 
 	function __construct()
 	{
@@ -25,21 +25,24 @@ class Rest_server extends REST_Controller{
 
 
 	public function test_get(){
-		$this->response((($this->P->iniciarSession($this->get("u"),$this->get("p")))));
+		//$this->response((($this->P->iniciarSession($this->get("u"),$this->get("p")))));
 	}
 
 	public function test_post(){
-		$this->response((($this->P->iniciarSession($this->get("u"),$this->get("p")))));
+		//
 	}
 
 
 	public function login_post(){
-		$data = $this->Ion_auth->jwtDecode($this->post());
+		//$this->reponse($this->post("usuario"));
+		echo json_encode($this->post("usuario"));
+		//$data = $this->response((($this->P->iniciarSession())));
 	}
 
-	public function login_get(){
+
+	public function login_get($usuario){
+		$this->Ion_auth->cors();
+		$this->reponse($usuario);
 	}
-
-
 
 }

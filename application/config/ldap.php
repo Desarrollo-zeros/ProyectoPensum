@@ -7,7 +7,7 @@ $config['bindpw'] = 'admin';
  * This means that the LDAP code will talk to a backup server if the main server is not operational.
  * There will be a delay while the code times out trying to talk to the main server but things will still work.
 */
-$config['server'] = 'localhost/Rest_server http://localhost/Rest_server';
+$config['server'] = 'localhost/api http://localhost/api';
 $config['port'] = 389;
 /*
  * Controls the LDAP_OPT_NETWORK_TIMEOUT option, this is how long the code will attempt to talk to the primary server if it is unreachable.

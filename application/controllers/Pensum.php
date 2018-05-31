@@ -12,8 +12,8 @@ class Pensum extends CI_Controller{
 
 
 	public function index(){
-		echo json_encode($this->M->pensum(4)); //json_encode($this->M->cargarDatosEstudiante("1065833705",4,5));
-		//var_dump($this->M->pensum(5));
+		//echo json_encode($this->M->pensum(4)); //json_encode($this->M->cargarDatosEstudiante("1065833705",4,5));
+		var_dump($_SERVER['HTTP_ORIGIN']);
 	}
 
 	public function iniciarSession($usuario,$contraseña){
