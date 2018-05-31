@@ -2175,6 +2175,7 @@ abstract class REST_Controller extends CI_Controller {
 
         if (in_array($this->input->ip_address(), $whitelist) === FALSE)
         {
+        	echo $this->input->ip_address();
             $this->response([
                 $this->config->item('rest_status_field_name') => FALSE,
                 $this->config->item('rest_message_field_name') => $this->lang->line('text_rest_ip_unauthorized')
