@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Animando cosas con CSS: Creando una luna</title>
+	<title>Proyect Pensum</title>
 	<style>
 		body {
 			background-color: #333;
