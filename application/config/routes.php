@@ -54,5 +54,5 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = TRUE;
 
 $route['Pensum/iniciarSession/(:any)'] = 'Pensum/iniciarSession/$1/$2';
-$route['Pensum/obtenerPensum/(:any)'] = 'Pensum/obtenerPensum/$1';
-$route['Pensum/obtenerInformacion/(:any)'] = 'Pensum/obtenerInformacion/$1/$2/$3';
+$route['Pensum/obtenerPensum/(:any)'] = 'Pensum/obtenerPensum/$1/$2';
+$route['Pensum/obtenerInformacion/(:any)'] = 'Pensum/obtenerInformacion/$1/$2/$3/$4';

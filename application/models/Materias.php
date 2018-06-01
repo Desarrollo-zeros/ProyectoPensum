@@ -17,8 +17,8 @@ class Materias extends  CI_Model{
 	}
 
 
-	public function cargarDatosEstudiante($cedula,$idPensumA, $idPensumN){
-		$datos = $this->consultarDatosGenerales($cedula,$idPensumA, $idPensumN);
+	public function cargarDatosEstudiante($cedula,$idPensumA, $idPensumN,$idusuario){
+		$datos = $this->consultarDatosGenerales($cedula,$idPensumA, $idPensumN,$idusuario);
 		if($datos->num_rows()<1){
 			exit(0);
 		}
@@ -83,7 +83,7 @@ class Materias extends  CI_Model{
 		return $homologadas;
 	}
 
-	public function consultarDatosGenerales($cedula,$idPensumA, $idPensumN){
+	public function consultarDatosGenerales($cedula,$idPensumA, $idPensumN,$idusuario){
 		return $this->db->query("select p.cedula, CONCAT(p.primerNombre,' ',p.segundoNombre) as nombre, CONCAT(p.primerApellido,' ',p.segundoApellido) as apellido,
 								  e.semestre,
 								 (select sum(creditos)
@@ -111,7 +111,7 @@ class Materias extends  CI_Model{
 								from PERSONA p 
 								inner join ESTUDIANTE e on e.idPersona = p.idPersona 
 								inner join usuario u on u.idUsuario = p.idUsuario
-								where p.cedula = '$cedula' and e.idPensum = $idPensumA and p.idUsuario ={$this->session->idUsuario} ");
+								where p.cedula = '$cedula' and e.idPensum = $idPensumA and p.idUsuario =$idusuario ");
 	}
 
 	public function consultarMateriasGanadas($cedula,$idPensum){
@@ -123,7 +123,7 @@ class Materias extends  CI_Model{
 								 where  p.cedula = '$cedula' and n.nota>=3.0 and e.idPensum = $idPensum order by vm.idMateria asc;")->result();
 	}
 
-	public function buscarPensum($idPensum){
+	public function buscarPensum($idPensum,$idUsuario){
 		$query = $this->db->query("SELECT *FROM MATERIA WHERE idPensum = $idPensum")->result();
 		$pensum = array();
 		for($i = 1; $i<=10; $i++){

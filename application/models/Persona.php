@@ -15,9 +15,9 @@ class Persona extends CI_Model{
 		$this->load->library("Herramientas");
 	}
 
-	public function iniciarSession($usuario,$password){
+	public function iniciarSession($usuario,$password,$idusuario){
 
-		if(empty($usuario) && empty($password) && isset($this->session->idUsuario)){
+		if(empty($usuario) && empty($password) && isset($idusuario)){
 
 			$query = $this->db->query("SELECT u.idUsuario,p.cedula, e.idPensum, c.idCarrera, CONCAT(p.primerNombre,' ',p.segundoNombre) as nombre,
 								CONCAT(p.primerApellido,' ',p.segundoApellido) as apellido
@@ -26,7 +26,7 @@ class Persona extends CI_Model{
 									inner join ESTUDIANTE e on e.idPersona = p.idPersona
 									inner join PENSUM pe on pe.idPensum = e.idPensum
 									inner join CARRERA c on c.idCarrera = pe.idCarrera
-									where u.idUsuario = '{$this->session->idUsuario}' ");
+									where u.idUsuario = $idusuario ");
 		}
 		else{
 			$query = $this->db->query("SELECT u.idUsuario,p.cedula, e.idPensum, c.idCarrera, CONCAT(p.primerNombre,' ',p.segundoNombre) as nombre,
