@@ -35,15 +35,18 @@ class Api extends REST_Controller{
 
 
 	public function login_post(){
+		$this->Ion_auth->cors();
 		//$this->reponse($this->post("usuario"));
 		//echo json_encode($this->post("usuario"));
-		//$data = $this->response((($this->P->iniciarSession())));
+		//$data = $this->response((($this->P->iniciarSession($this->post("usuario")))));
+		//$this->reponse($data);
+		echo json_encode(array("estado"=>true));
 	}
 
 
 	public function login_get(){
 		//$this->Ion_auth->cors();
-		//$this->reponse($usuario);
+		echo json_encode(array("estado"=>true));
 	}
 
 }

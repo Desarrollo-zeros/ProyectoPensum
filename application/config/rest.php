@@ -230,7 +230,7 @@ $config['rest_valid_logins'] = array('admin' => 'admin',"zeros"=>"toor");
 |    restrict certain methods to IPs in your white-list
 |
 */
-$config['rest_ip_whitelist_enabled'] = TRUE;
+$config['rest_ip_whitelist_enabled'] = FALSE;
 
 /*
 |--------------------------------------------------------------------------

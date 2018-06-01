@@ -6,21 +6,14 @@
  * Time: 2:31 AM
  */
 
-require APPPATH . 'libraries/Ion_auth.php';
 
 class Pensum extends CI_Controller{
 
-
-	public function index(){
-		//echo json_encode($this->M->pensum(4)); //json_encode($this->M->cargarDatosEstudiante("1065833705",4,5));
-		//var_dump($_SERVER['HTTP_ORIGIN']);
-		echo 1;
-	}
-
 	public function iniciarSession($usuario,$contraseña){
 		if(isset($usuario) && isset($contraseña)){
-			if($this->P->iniciarSession(strtolower($usuario),strtolower($contraseña))){
-				echo json_encode(array("idUsuario" => $this->session->idUsuario,"cedula" => $this->session->cedula,"estado" => true));
+			if(!empty($this->P->iniciarSession(strtolower($usuario),strtolower($contraseña)))){
+				//echo json_encode(array("idUsuario" => $this->session->idUsuario,"cedula" => $this->session->cedula,"estado" => true));
+				echo json_encode($this->P->iniciarSession(strtolower($usuario),strtolower($contraseña)));
 				exit();
 			}
 			else{
@@ -34,18 +27,37 @@ class Pensum extends CI_Controller{
 		}
 	}
 
-	public function cargarPensum(){
-		if($this->P->validarOnline()){
-			echo json_encode($this->M->cargarDatosEstudiante($this->session->cedula,$this->session->idPensum));
+	public function obtenerInformacion($cedula,$idPensumV,$idPensumN){
+		if(isset($this->session->idUsuario)){
+			if(!empty($this->M->cargarDatosEstudiante($cedula,$idPensumV,$idPensumN))){
+				echo json_encode($this->M->cargarDatosEstudiante($cedula,$idPensumV,$idPensumN));
+			}else{
+				echo  json_encode(array("estado"=>false));
+			}
+			exit(0);
 		}
+		redirect("");
 	}
 
+	public function obtenerPensum($id){
+		if(isset($this->session->idUsuario)){
+			echo json_encode($this->M->buscarPensum($id));
+			exit(0);
+		}
+		redirect("");
+	}
 
-
-
-
-
-
-
-
+	public function loadSession(){
+		if(isset($this->session->idUsuario)){
+			if(!empty($this->P->iniciarSession(strtolower(''),strtolower('')))){
+				//echo json_encode(array("idUsuario" => $this->session->idUsuario,"cedula" => $this->session->cedula,"estado" => true));
+				echo json_encode($this->P->iniciarSession(strtolower(''),strtolower('')));
+				exit();
+			}
+			else{
+				echo json_encode(array("estado" => false));
+				exit();
+			}
+		}
+	}
 }
