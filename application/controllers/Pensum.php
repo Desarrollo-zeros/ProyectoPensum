@@ -8,7 +8,7 @@
 
 
 class Pensum extends CI_Controller{
-
+					//inicia session y guarda variable en cokies
 	public function iniciarSession($usuario,$contraseña){
 		if(isset($usuario) && isset($contraseña)){
 			if(!empty($this->P->iniciarSession(strtolower($usuario),strtolower($contraseña)))){
@@ -26,7 +26,7 @@ class Pensum extends CI_Controller{
 			exit();
 		}
 	}
-
+												//idPensumViejo, //idPensumNuevo
 	public function obtenerInformacion($cedula,$idPensumV,$idPensumN){
 		if(isset($this->session->idUsuario)){
 			if(!empty($this->M->cargarDatosEstudiante($cedula,$idPensumV,$idPensumN))){
@@ -38,15 +38,15 @@ class Pensum extends CI_Controller{
 		}
 		redirect("");
 	}
-
-	public function obtenerPensum($id){
+									//cualquierIdpensum
+	public function obtenerPensum($idPensum){
 		if(isset($this->session->idUsuario)){
-			echo json_encode($this->M->buscarPensum($id));
+			echo json_encode($this->M->buscarPensum($idPensum));
 			exit(0);
 		}
 		redirect("");
 	}
-
+					//carga los datos de la sessiones existentes
 	public function loadSession(){
 		if(isset($this->session->idUsuario)){
 			if(!empty($this->P->iniciarSession(strtolower(''),strtolower('')))){

@@ -110,7 +110,8 @@ class Materias extends  CI_Model{
 								 inner join PERSONA p on p.idPersona = e.idPersona where p.cedula = '$cedula') as promedioActual
 								from PERSONA p 
 								inner join ESTUDIANTE e on e.idPersona = p.idPersona 
-								where p.cedula = '$cedula' and e.idPensum = $idPensumA");
+								inner join usuario u on u.idUsuario = p.idUsuario
+								where p.cedula = '$cedula' and e.idPensum = $idPensumA and p.idUsuario ={$this->session->idUsuario} ");
 	}
 
 	public function consultarMateriasGanadas($cedula,$idPensum){
