@@ -17,8 +17,8 @@ class Materias extends  CI_Model{
 	}
 
 
-	public function cargarDatosEstudiante($cedula,$idPensumA, $idPensumN,$idusuario){
-		$datos = $this->consultarDatosGenerales($cedula,$idPensumA, $idPensumN,$idusuario);
+	public function cargarDatosEstudiante($cedula,$idPensumA, $idPensumN){
+		$datos = $this->consultarDatosGenerales($cedula,$idPensumA, $idPensumN);
 		if($datos->num_rows()<1){
 			exit(0);
 		}
@@ -63,8 +63,8 @@ class Materias extends  CI_Model{
 			"carrera" => $datos->row("carrera"),
 			"vCreditoMaxPensum" => $datos->row("vCreditoMaxPensum"),
 			"nCreditoMaxPensum" => $datos->row("nCreditoMaxPensum"),
-			"porcentajePensumActual" => round((empty($datos->row("vCreditos")) ? 1 : $datos->row("vCreditos")) /(empty($datos->row("vCreditoMaxPensum")) ? 1 : $datos->row("vCreditoMaxPensum") /100)),
-			"porcentajePensumNuevo" => round((empty($datos->row("nCreditos")) ? 1 : $datos->row("nCreditos")) /(empty($datos->row("nCreditoMaxPensum")) ? 1 : $datos->row("vCreditoMaxPensum")/100)),
+			"porcentajePensumActual" => ((empty($datos->row("vCreditos")) ? 1 : $datos->row("vCreditos")) /(empty($datos->row("vCreditoMaxPensum")) ? 1 : $datos->row("vCreditoMaxPensum") /100)),
+			"porcentajePensumNuevo" => ((empty($datos->row("nCreditos")) ? 1 : $datos->row("nCreditos")) /(empty($datos->row("nCreditoMaxPensum")) ? 1 : $datos->row("vCreditoMaxPensum")/100)),
 			"materias" => array(
 				"ganadas" => $ganadasYhomologadas,
 				"perdidas" => ($perdidas1)
@@ -83,7 +83,7 @@ class Materias extends  CI_Model{
 		return $homologadas;
 	}
 
-	public function consultarDatosGenerales($cedula,$idPensumA, $idPensumN,$idusuario){
+	public function consultarDatosGenerales($cedula,$idPensumA, $idPensumN){
 		return $this->db->query("select p.cedula, CONCAT(p.primerNombre,' ',p.segundoNombre) as nombre, CONCAT(p.primerApellido,' ',p.segundoApellido) as apellido,
 								  e.semestre,
 								 (select sum(creditos)
@@ -110,8 +110,8 @@ class Materias extends  CI_Model{
 								 inner join PERSONA p on p.idPersona = e.idPersona where p.cedula = '$cedula') as promedioActual
 								from PERSONA p 
 								inner join ESTUDIANTE e on e.idPersona = p.idPersona 
-								inner join usuario u on u.idUsuario = p.idUsuario
-								where p.cedula = '$cedula' and e.idPensum = $idPensumA and p.idUsuario =$idusuario ");
+								inner join USUARIO u on u.idUsuario = p.idUsuario
+								where p.cedula = '$cedula' and e.idPensum = $idPensumA ");
 	}
 
 	public function consultarMateriasGanadas($cedula,$idPensum){
@@ -123,19 +123,23 @@ class Materias extends  CI_Model{
 								 where  p.cedula = '$cedula' and n.nota>=3.0 and e.idPensum = $idPensum order by vm.idMateria asc;")->result();
 	}
 
-	public function buscarPensum($idPensum,$idUsuario){
+	public function buscarPensum($idPensum){
 		$query = $this->db->query("SELECT *FROM MATERIA WHERE idPensum = $idPensum")->result();
 		$pensum = array();
-		for($i = 1; $i<=10; $i++){
-			$ar = array();
-			$periodo = array();
+
+		$periodo = array();
+		for($i = 1; $i<11; $i++){
+			$objeto = new stdClass;
+			$objeto->periodo = '';
+			$objeto->materia = array();
+			$objeto->periodo = $i;
 			foreach ($query as $row){
 				if($i == $row->semestre){
-					array_push($ar,$row);
+					array_push($objeto->materia,$row);
+					array_push($periodo,$objeto);
 				}
 			}
-			array_push($periodo,$ar);
-			array_push($pensum,$periodo);
+			array_push($pensum,$objeto);
 		}
 		return $pensum;
 	}

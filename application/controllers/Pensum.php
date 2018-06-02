@@ -11,7 +11,8 @@ class Pensum extends CI_Controller{
 					//inicia session y guarda variable en cokies
 	public function iniciarSession($usuario,$contraseña){
 		if(isset($usuario) && isset($contraseña)){
-			if(!empty($this->P->iniciarSession(strtolower($usuario),strtolower($contraseña)))){
+			$idUsuario = '';
+			if(!empty($this->P->iniciarSession(strtolower($usuario),strtolower($contraseña),$idUsuario))){
 				//echo json_encode(array("idUsuario" => $this->session->idUsuario,"cedula" => $this->session->cedula,"estado" => true));
 				echo json_encode($this->P->iniciarSession(strtolower($usuario),strtolower($contraseña)));
 				exit();
@@ -27,19 +28,15 @@ class Pensum extends CI_Controller{
 		}
 	}
 												//idPensumViejo, //idPensumNuevo
-	public function obtenerInformacion($cedula,$idPensumV,$idPensumN,$idusuario){
-		if(isset($idusuario)){
-			if(!empty($this->M->cargarDatosEstudiante($cedula,$idPensumV,$idPensumN,$idusuario))){
-				echo json_encode($this->M->cargarDatosEstudiante($cedula,$idPensumV,$idPensumN,$idusuario));
-			}else{
-				echo  json_encode(array("estado"=>false));
-			}
-			exit(0);
+	public function obtenerInformacion($cedula,$idPensumV,$idPensumN){
+		if(!empty($this->M->cargarDatosEstudiante($cedula,$idPensumV,$idPensumN))){
+			echo json_encode($this->M->cargarDatosEstudiante($cedula,$idPensumV,$idPensumN));
+		}else{
+			echo  json_encode(array("estado"=>false));
 		}
-		redirect("");
 	}
 									//cualquierIdpensum
-	public function obtenerPensum($idPensum,$idusuario){
+	public function obtenerPensum($idPensum,$idusuario = ''){
 		if(isset($idusuario)){
 			echo json_encode($this->M->buscarPensum($idPensum,$idusuario));
 			exit(0);
@@ -63,5 +60,32 @@ class Pensum extends CI_Controller{
 
 	public function index(){
 		$this->load->view("welcome_message");
+	}
+
+	public function uploadPdf(){
+
+		$config['upload_path'] = 'uploads/';
+		$config['allowed_types'] = 'pdf';
+		$config['max_filename'] = '255';
+		$config['encrypt_name'] = TRUE;
+		$config['max_size'] = '1024'; //1 MB
+
+		$this->load->library('upload', $config);
+
+		/*if ( ! $this->upload->do_upload('userfile'))
+		{
+			$error = array('error' => $this->upload->display_errors());
+
+			$this->load->view('upload_form', $error);
+		}
+		else
+		{
+			$data = array('upload_data' => $this->upload->data());
+
+			$this->load->view('upload_success', $data);
+		}
+		*/
+		echo json_encode($this->input->file());
+
 	}
 }

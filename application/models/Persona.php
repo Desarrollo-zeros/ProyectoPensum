@@ -15,7 +15,7 @@ class Persona extends CI_Model{
 		$this->load->library("Herramientas");
 	}
 
-	public function iniciarSession($usuario,$password,$idusuario){
+	public function iniciarSession($usuario,$password,$idusuario = ''){
 
 		if(empty($usuario) && empty($password) && isset($idusuario)){
 
