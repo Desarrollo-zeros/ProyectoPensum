@@ -1,0 +1,326 @@
+{
+    "nombre": "ADRIAN ALBERTO",
+    "apellido": "URREGO BOHORQUEZ",
+    "cedula": "1065833705",
+    "semestre": "6",
+    "vCreditos": "93",
+    "nCreditos": "77",
+    "materias": { 
+        "ganadas": [
+            {
+                "codigo": "FC406",
+                "nombre": "INTRODUCCION A LA INGENIERIA DE SISTEMAS",
+                "homologada": [
+                    {
+                        "codigo": "SS407",
+                        "nombre": "FUNDAMENTOS DE PROGRAMACION"
+                    },
+                    {
+                        "codigo": "FC406",
+                        "nombre": "INTRODUCCION A LA INGENIERIA DE SISTEMAS"
+                    }
+                ]
+            },
+            {
+                "codigo": "UPC08",
+                "nombre": "ACTIVIDAD DEPORTIVA",
+                "homologada": [
+                    {
+                        "codigo": "UPC04",
+                        "nombre": "ACTIVIDAD CULTURAL O DEPORTIVA I"
+                    }
+                ]
+            },
+            {
+                "codigo": "MT302B",
+                "nombre": "CALCULO DIFERENCIAL",
+                "homologada": [
+                    {
+                        "codigo": "MT302B",
+                        "nombre": "CALCULO DIFERENCIAL"
+                    }
+                ]
+            },
+            {
+                "codigo": "UPC01",
+                "nombre": "CATEDRA UPECISTA",
+                "homologada": [
+                    {
+                        "codigo": "UPC01",
+                        "nombre": "CATEDRA UPECISTA"
+                    }
+                ]
+            },
+            {
+                "codigo": "HM301",
+                "nombre": "HUMANIDADES I",
+                "homologada": [
+                    {
+                        "codigo": "HM301",
+                        "nombre": "HUMANIDADES I"
+                    }
+                ]
+            },
+            {
+                "codigo": "UPC04",
+                "nombre": "LENGUA EXTRANJERA-GRAMATICA",
+                "homologada": [
+                    {
+                        "codigo": "UPC06",
+                        "nombre": "LENGUA EXTRANJERA-GRAMATICA"
+                    }
+                ]
+            },
+            {
+                "codigo": "MT310B",
+                "nombre": "LOGICA, CONJUNTOS Y GRAFOS",
+                "homologada": [
+                    {
+                        "codigo": "XXX1",
+                        "nombre": "MATEMATICA DISCRETA"
+                    }
+                ]
+            },
+            {
+                "codigo": "PG312",
+                "nombre": "TECNICAS DE AUTOAPRENDIZAJE",
+                "homologada": [
+                    {
+                        "codigo": "PG101",
+                        "nombre": "COMUNICACI\u00d3N ORAL Y ESCRITA l"
+                    }
+                ]
+            },
+            {
+                "codigo": "MT301B",
+                "nombre": "ALGEBRA LINEAL",
+                "homologada": [
+                    {
+                        "codigo": "MT301B",
+                        "nombre": "ALGEBRA LINEAL"
+                    }
+                ]
+            },
+            {
+                "codigo": "MT303B",
+                "nombre": "CALCULO INTEGRAL",
+                "homologada": [
+                    {
+                        "codigo": "MT303B",
+                        "nombre": "CALCULO INTEGRAL"
+                    }
+                ]
+            },
+            {
+                "codigo": "HM302",
+                "nombre": "HUMANIDADES II",
+                "homologada": [
+                    {
+                        "codigo": "HM302",
+                        "nombre": "HUMANIDADES II"
+                    }
+                ]
+            },
+            {
+                "codigo": "UPC05",
+                "nombre": "LENGUA EXTRANJERA-LECTURA",
+                "homologada": [
+                    {
+                        "codigo": "UPC07",
+                        "nombre": "LENGUA EXTRANJERA-LECTURA"
+                    }
+                ]
+            },
+            {
+                "codigo": "FS314",
+                "nombre": "MECANICA",
+                "homologada": [
+                    {
+                        "codigo": "FS314",
+                        "nombre": "MECANICA"
+                    }
+                ]
+            },
+            {
+                "codigo": "SS401",
+                "nombre": "PROGRAMACION DE COMPUTADORES I",
+                "homologada": [
+                    {
+                        "codigo": "SS401",
+                        "nombre": "PROGRAMACION DE COMPUTADORES I"
+                    }
+                ]
+            },
+            {
+                "codigo": "MT304B",
+                "nombre": "CALCULO MULTIVARIABLE",
+                "homologada": [
+                    {
+                        "codigo": "MT304B",
+                        "nombre": "CALCULO MULTIVARIABLE"
+                    }
+                ]
+            },
+            {
+                "codigo": "FS311",
+                "nombre": "ELECTROMAGNETISMO",
+                "homologada": [
+                    {
+                        "codigo": "FS311",
+                        "nombre": "ELECTROMAGNETISMO"
+                    }
+                ]
+            },
+            {
+                "codigo": "MT307B",
+                "nombre": "ESTADISTICA DESCRIPTIVA E INFERENCIAL",
+                "homologada": [
+                    {
+                        "codigo": "MT307B",
+                        "nombre": "ESTADISTICA DESCRIPTIVA E INFERENCIAL"
+                    }
+                ]
+            },
+            {
+                "codigo": "AE101",
+                "nombre": "FUNDAMENTOS DE ADMINISTRACION",
+                "homologada": [
+                    {
+                        "codigo": "AE101",
+                        "nombre": "FUNDAMENTOS DE ADMINISTRACION"
+                    }
+                ]
+            },
+            {
+                "codigo": "SS402",
+                "nombre": "PROGRAMACION DE COMPUTADORES II",
+                "homologada": [
+                    {
+                        "codigo": "SS402",
+                        "nombre": "PROGRAMACION DE COMPUTADORES II"
+                    }
+                ]
+            },
+            {
+                "codigo": "ING301",
+                "nombre": "METODOLOGIA DE LA INVESTIGACION",
+                "homologada": [
+                    {
+                        "codigo": "ING301",
+                        "nombre": "METODOLOGIA DE LA INVESTIGACION"
+                    }
+                ]
+            },
+            {
+                "codigo": "SS406",
+                "nombre": "ESTRUCTURA DE DATOS",
+                "homologada": [
+                    {
+                        "codigo": "SS406",
+                        "nombre": "ESTRUCTURA DE DATOS"
+                    }
+                ]
+            },
+            {
+                "codigo": "UPC06",
+                "nombre": "LENGUA EXTRANJERA-ESCRITURA",
+                "homologada": [
+                    {
+                        "codigo": "UPC08",
+                        "nombre": "LENGUA EXTRANJERA-ESCRITURA"
+                    }
+                ]
+            },
+            {
+                "codigo": "SS404",
+                "nombre": "PROGRAMACION DE COMPUTADORES III",
+                "homologada": [
+                    {
+                        "codigo": "SS404",
+                        "nombre": "PROGRAMACION DE COMPUTADORES III"
+                    }
+                ]
+            },
+            {
+                "codigo": "SS426",
+                "nombre": "BASES DE DATOS I",
+                "homologada": [
+                    {
+                        "codigo": "SS426",
+                        "nombre": "BASES DE DATOS"
+                    }
+                ]
+            },
+            {
+                "codigo": "SS400",
+                "nombre": "PROGRAMACION BAJO WEB",
+                "homologada": [
+                    {
+                        "codigo": "SS424-X1",
+                        "nombre": "PROGRAMACION BAJO WEB"
+                    }
+                ]
+            },
+            {
+                "codigo": "ING302",
+                "nombre": "SEMINARIO DE INVESTIGACION",
+                "homologada": [
+                    {
+                        "codigo": "ING302",
+                        "nombre": "SEMINARIO DE INVESTIGACION"
+                    }
+                ]
+            },
+            {
+                "codigo": "UPC07",
+                "nombre": "LENGUA EXTRANJERA CONVERSACION",
+                "homologada": [
+                    {
+                        "codigo": "UPC09",
+                        "nombre": "LENGUA EXTRANJERA CONVERSACION"
+                    }
+                ]
+            },
+            {
+                "codigo": "SS427",
+                "nombre": "BASES DE DATOS II",
+                "homologada": [
+                    {
+                        "codigo": "SS472",
+                        "nombre": "BASE DE DATOS AVANZADAS"
+                    }
+                ]
+            },
+            {
+                "codigo": "SS444-A",
+                "nombre": "INGENIERIA DEL SOFTWARE I",
+                "homologada": [
+                    {
+                        "codigo": "SS444-A",
+                        "nombre": "INGENIERIA DEL SOFTWARE I"
+                    }
+                ]
+            },
+            {
+                "codigo": "CP101",
+                "nombre": "FUNDAMENTOS CONTABLES",
+                "homologada": [
+                    {
+                        "codigo": "EC105",
+                        "nombre": "ELECTIVA CIENCIAS ADMINISTRACTIVAS"
+                    }
+                ]
+            }
+        ],
+        "perdidas": [
+            {
+                "codigo": "MT305B",
+                "nombre": "ECUACIONES DIFERENCIALES ORDINARIAS"
+            },
+            {
+                "codigo": "FS315",
+                "nombre": "ONDAS"
+            }
+        ]
+    }
+}

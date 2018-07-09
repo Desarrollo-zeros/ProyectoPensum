@@ -1,0 +1,702 @@
+[
+    {
+        "Periodo": "1",
+        "materias": [
+            {
+                "codigo": "FC406",
+                "nombre": "INTRODUCCION A LA INGENIERIA DE SISTEMAS",
+                "HT": "4",
+                "HP": "-",
+                "HTP": "-",
+                "credito": "4",
+                "requisitos": [
+                    ""
+                ],
+                "Creditos requisitos": "0"
+            },
+            {
+                "codigo": "UPC08",
+                "nombre": "ACTIVIDAD DEPORTIVA",
+                "HT": "2",
+                "HP": "-",
+                "HTP": "-",
+                "credito": "1",
+                "requisitos": [
+                    ""
+                ],
+                "Creditos requisitos": "0"
+            },
+            {
+                "codigo": "MT302B",
+                "nombre": "CALCULO DIFERENCIAL",
+                "HT": "4",
+                "HP": "-",
+                "HTP": "-",
+                "credito": "4",
+                "requisitos": [
+                    ""
+                ],
+                "Creditos requisitos": "0"
+            },
+            {
+                "codigo": "UPC01",
+                "nombre": "CATEDRA UPECISTA",
+                "HT": "2",
+                "HP": "-",
+                "HTP": "-",
+                "credito": "1",
+                "requisitos": [
+                    ""
+                ],
+                "Creditos requisitos": "0"
+            },
+            {
+                "codigo": "HM301",
+                "nombre": "HUMANIDADES I",
+                "HT": "3",
+                "HP": "-",
+                "HTP": "-",
+                "credito": "3",
+                "requisitos": [
+                    ""
+                ],
+                "Creditos requisitos": "0"
+            },
+            {
+                "codigo": "UPC04",
+                "nombre": "LENGUA EXTRANJERA-GRAMATICA",
+                "HT": "2",
+                "HP": "-",
+                "HTP": "-",
+                "credito": "2",
+                "requisitos": [
+                    ""
+                ],
+                "Creditos requisitos": "0"
+            },
+            {
+                "codigo": "MT310B",
+                "nombre": "LOGICA, CONJUNTOS Y GRAFOS",
+                "HT": "3",
+                "HP": "-",
+                "HTP": "-",
+                "credito": "3",
+                "requisitos": [
+                    ""
+                ],
+                "Creditos requisitos": ""
+            },
+            {
+                "codigo": "PG312",
+                "nombre": "TECNICAS DE AUTOAPRENDIZAJE",
+                "HT": "2",
+                "HP": "-",
+                "HTP": "-",
+                "credito": "2",
+                "requisitos": [
+                    ""
+                ],
+                "Creditos requisitos": "0"
+            }
+        ]
+    },
+    {
+        "Periodo": "2",
+        "materias": [
+            {
+                "codigo": "UPC09",
+                "nombre": "ACTIVIDAD CULTURAL",
+                "HT": "2",
+                "HP": "-",
+                "HTP": "-",
+                "credito": "1",
+                "requisitos": [
+                    ""
+                ],
+                "Creditos requisitos": "0"
+            },
+            {
+                "codigo": "MT301B",
+                "nombre": "ALGEBRA LINEAL",
+                "HT": "3",
+                "HP": "-",
+                "HTP": "-",
+                "credito": "3",
+                "requisitos": [
+                    "MT310B"
+                ],
+                "Creditos requisitos": "0"
+            },
+            {
+                "codigo": "MT303B",
+                "nombre": "CALCULO INTEGRAL",
+                "HT": "3",
+                "HP": "-",
+                "HTP": "-",
+                "credito": "3",
+                "requisitos": [
+                    "MT302B"
+                ],
+                "Creditos requisitos": "0"
+            },
+            {
+                "codigo": "HM302",
+                "nombre": "HUMANIDADES II",
+                "HT": "3",
+                "HP": "-",
+                "HTP": "-",
+                "credito": "3",
+                "requisitos": [
+                    "HM301"
+                ],
+                "Creditos requisitos": "0"
+            },
+            {
+                "codigo": "UPC05",
+                "nombre": "LENGUA EXTRANJERA-LECTURA",
+                "HT": "2",
+                "HP": "-",
+                "HTP": "-",
+                "credito": "2",
+                "requisitos": [
+                    "UPC04"
+                ],
+                "Creditos requisitos": "0"
+            },
+            {
+                "codigo": "FS314",
+                "nombre": "MECANICA",
+                "HT": "2",
+                "HP": "2",
+                "HTP": "-",
+                "credito": "4",
+                "requisitos": [
+                    "MT302B"
+                ],
+                "Creditos requisitos": "0"
+            },
+            {
+                "codigo": "SS401",
+                "nombre": "PROGRAMACION DE COMPUTADORES I",
+                "HT": "2",
+                "HP": "2",
+                "HTP": "-",
+                "credito": "4",
+                "requisitos": [
+                    "FC406"
+                ],
+                "Creditos requisitos": "0"
+            }
+        ]
+    },
+    {
+        "Periodo": "3",
+        "materias": [
+            {
+                "codigo": "MT304B",
+                "nombre": "CALCULO MULTIVARIABLE",
+                "HT": "4",
+                "HP": "-",
+                "HTP": "-",
+                "credito": "4",
+                "requisitos": [
+                    "MT303B"
+                ],
+                "Creditos requisitos": "0"
+            },
+            {
+                "codigo": "FS311",
+                "nombre": "ELECTROMAGNETISMO",
+                "HT": "2",
+                "HP": "2",
+                "HTP": "-",
+                "credito": "4",
+                "requisitos": [
+                    "FS314"
+                ],
+                "Creditos requisitos": "0"
+            },
+            {
+                "codigo": "MT307B",
+                "nombre": "ESTADISTICA DESCRIPTIVA E INFERENCIAL",
+                "HT": "4",
+                "HP": "-",
+                "HTP": "-",
+                "credito": "4",
+                "requisitos": [
+                    "MT301B"
+                ],
+                "Creditos requisitos": "0"
+            },
+            {
+                "codigo": "AE101",
+                "nombre": "FUNDAMENTOS DE ADMINISTRACION",
+                "HT": "3",
+                "HP": "-",
+                "HTP": "-",
+                "credito": "3",
+                "requisitos": [
+                    ""
+                ],
+                "Creditos requisitos": "0"
+            },
+            {
+                "codigo": "SS402",
+                "nombre": "PROGRAMACION DE COMPUTADORES II",
+                "HT": "2",
+                "HP": "2",
+                "HTP": "-",
+                "credito": "4",
+                "requisitos": [
+                    "SS401"
+                ],
+                "Creditos requisitos": "0"
+            }
+        ]
+    },
+    {
+        "Periodo": "4",
+        "materias": [
+            {
+                "codigo": "ING301",
+                "nombre": "METODOLOGIA DE LA INVESTIGACION",
+                "HT": "2",
+                "HP": "-",
+                "HTP": "-",
+                "credito": "2",
+                "requisitos": [
+                    ""
+                ],
+                "Creditos requisitos": "0"
+            },
+            {
+                "codigo": "MT305B",
+                "nombre": "ECUACIONES DIFERENCIALES ORDINARIAS",
+                "HT": "3",
+                "HP": "-",
+                "HTP": "-",
+                "credito": "3",
+                "requisitos": [
+                    "MT304B"
+                ],
+                "Creditos requisitos": "0"
+            },
+            {
+                "codigo": "SS406",
+                "nombre": "ESTRUCTURA DE DATOS",
+                "HT": "2",
+                "HP": "2",
+                "HTP": "-",
+                "credito": "4",
+                "requisitos": [
+                    "SS402"
+                ],
+                "Creditos requisitos": "0"
+            },
+            {
+                "codigo": "UPC06",
+                "nombre": "LENGUA EXTRANJERA-ESCRITURA",
+                "HT": "2",
+                "HP": "-",
+                "HTP": "-",
+                "credito": "2",
+                "requisitos": [
+                    "UPC05"
+                ],
+                "Creditos requisitos": "0"
+            },
+            {
+                "codigo": "FS315",
+                "nombre": "ONDAS",
+                "HT": "2",
+                "HP": "2",
+                "HTP": "-",
+                "credito": "4",
+                "requisitos": [
+                    "FS311"
+                ],
+                "Creditos requisitos": "0"
+            },
+            {
+                "codigo": "SS404",
+                "nombre": "PROGRAMACION DE COMPUTADORES III",
+                "HT": "2",
+                "HP": "2",
+                "HTP": "-",
+                "credito": "4",
+                "requisitos": [
+                    "SS402"
+                ],
+                "Creditos requisitos": "0"
+            }
+        ]
+    },
+    {
+        "Periodo": "5",
+        "materias": [
+            {
+                "codigo": "SS428",
+                "nombre": "ARQUITECTURA DE COMPUTADORES",
+                "HT": "-",
+                "HP": "3",
+                "HTP": "-",
+                "credito": "3",
+                "requisitos": [
+                    "FS315"
+                ],
+                "Creditos requisitos": "0"
+            },
+            {
+                "codigo": "SS426",
+                "nombre": "BASES DE DATOS I",
+                "HT": "2",
+                "HP": "2",
+                "HTP": "-",
+                "credito": "4",
+                "requisitos": [
+                    "SS406"
+                ],
+                "Creditos requisitos": "0"
+            },
+            {
+                "codigo": "SS400",
+                "nombre": "PROGRAMACION BAJO WEB",
+                "HT": "2",
+                "HP": "2",
+                "HTP": "-",
+                "credito": "4",
+                "requisitos": [
+                    "SS404"
+                ],
+                "Creditos requisitos": "0"
+            },
+            {
+                "codigo": "ING302",
+                "nombre": "SEMINARIO DE INVESTIGACION",
+                "HT": "-",
+                "HP": "2",
+                "HTP": "-",
+                "credito": "2",
+                "requisitos": [
+                    "ING301"
+                ],
+                "Creditos requisitos": "0"
+            },
+            {
+                "codigo": "MT306B",
+                "nombre": "FUNCIONES ESPECIALES Y ECUACIONES DIFERENCIALES",
+                "HT": "4",
+                "HP": "-",
+                "HTP": "-",
+                "credito": "4",
+                "requisitos": [
+                    "MT305B"
+                ],
+                "Creditos requisitos": "0"
+            },
+            {
+                "codigo": "UPC07",
+                "nombre": "LENGUA EXTRANJERA CONVERSACION",
+                "HT": "2",
+                "HP": "-",
+                "HTP": "-",
+                "credito": "2",
+                "requisitos": [
+                    "UPC06"
+                ],
+                "Creditos requisitos": "0"
+            }
+        ]
+    },
+    {
+        "Periodo": "6",
+        "materias": [
+            {
+                "codigo": "SS427",
+                "nombre": "BASES DE DATOS II",
+                "HT": "2",
+                "HP": "2",
+                "HTP": "-",
+                "credito": "4",
+                "requisitos": [
+                    "SS426"
+                ],
+                "Creditos requisitos": "0"
+            },
+            {
+                "codigo": "SS444-A",
+                "nombre": "INGENIERIA DEL SOFTWARE I",
+                "HT": "-",
+                "HP": "4",
+                "HTP": "-",
+                "credito": "4",
+                "requisitos": [
+                    "SS400"
+                ],
+                "Creditos requisitos": "0"
+            },
+            {
+                "codigo": "SS438",
+                "nombre": "SISTEMAS OPERATIVOS",
+                "HT": "2",
+                "HP": "2",
+                "HTP": "-",
+                "credito": "4",
+                "requisitos": [
+                    "SS428"
+                ],
+                "Creditos requisitos": "0"
+            },
+            {
+                "codigo": "MT309B",
+                "nombre": "ANALISIS NUMERICO",
+                "HT": "3",
+                "HP": "-",
+                "HTP": "-",
+                "credito": "3",
+                "requisitos": [
+                    "MT306B"
+                ],
+                "Creditos requisitos": "0"
+            },
+            {
+                "codigo": "HM305",
+                "nombre": "CULTURAS INTERNACIONALES",
+                "HT": "2",
+                "HP": "-",
+                "HTP": "-",
+                "credito": "2",
+                "requisitos": [
+                    ""
+                ],
+                "Creditos requisitos": "85"
+            },
+            {
+                "codigo": "CP101",
+                "nombre": "FUNDAMENTOS CONTABLES",
+                "HT": "3",
+                "HP": "-",
+                "HTP": "-",
+                "credito": "3",
+                "requisitos": [
+                    "AE101"
+                ],
+                "Creditos requisitos": "0"
+            }
+        ]
+    },
+    {
+        "Periodo": "7",
+        "materias": [
+            {
+                "codigo": "SS445-A",
+                "nombre": "INGENIERIA DEL SOFTWARE II",
+                "HT": "-",
+                "HP": "4",
+                "HTP": "-",
+                "credito": "4",
+                "requisitos": [
+                    "SS444-A",
+                    "SS427"
+                ],
+                "Creditos requisitos": "0"
+            },
+            {
+                "codigo": "SS430",
+                "nombre": "MODELOS Y SIMULACION",
+                "HT": "2",
+                "HP": "2",
+                "HTP": "-",
+                "credito": "4",
+                "requisitos": [
+                    "MT309B"
+                ],
+                "Creditos requisitos": "0"
+            },
+            {
+                "codigo": "SS428-A",
+                "nombre": "REDES Y COMUNICACIONES",
+                "HT": "2",
+                "HP": "2",
+                "HTP": "-",
+                "credito": "4",
+                "requisitos": [
+                    "SS438",
+                    "SS406"
+                ],
+                "Creditos requisitos": "0"
+            },
+            {
+                "codigo": "AI420",
+                "nombre": "INGENIERIA ECONOMICA",
+                "HT": "2",
+                "HP": "-",
+                "HTP": "-",
+                "credito": "2",
+                "requisitos": [
+                    "CP101"
+                ],
+                "Creditos requisitos": "0"
+            },
+            {
+                "codigo": "MT318B",
+                "nombre": "PROGRAMACION LINEAL",
+                "HT": "3",
+                "HP": "-",
+                "HTP": "-",
+                "credito": "3",
+                "requisitos": [
+                    "MT307B"
+                ],
+                "Creditos requisitos": "0"
+            }
+        ]
+    },
+    {
+        "Periodo": "8",
+        "materias": [
+            {
+                "codigo": "FC403",
+                "nombre": "DISEÑO EXPERIMENTAL",
+                "HT": "2",
+                "HP": "-",
+                "HTP": "-",
+                "credito": "2",
+                "requisitos": [
+                    "MT307B"
+                ],
+                "Creditos requisitos": "0"
+            },
+            {
+                "codigo": "SS430-A",
+                "nombre": "AUDITORIA DE SISTEMAS",
+                "HT": "4",
+                "HP": "-",
+                "HTP": "-",
+                "credito": "4",
+                "requisitos": [
+                    "SS445-A"
+                ],
+                "Creditos requisitos": "0"
+            },
+            {
+                "codigo": "SS429-A",
+                "nombre": "INTELIGENCIA ARTIFICIAL",
+                "HT": "-",
+                "HP": "4",
+                "HTP": "-",
+                "credito": "4",
+                "requisitos": [
+                    "SS430"
+                ],
+                "Creditos requisitos": "0"
+            },
+            {
+                "codigo": "SS424",
+                "nombre": "COMPUTACION GRAFICA",
+                "HT": "3",
+                "HP": "-",
+                "HTP": "-",
+                "credito": "3",
+                "requisitos": [
+                    "SS430"
+                ],
+                "Creditos requisitos": "0"
+            },
+            {
+                "codigo": "AI432",
+                "nombre": "INVESTIGACION DE OPERACIONES (SISTEMAS)",
+                "HT": "3",
+                "HP": "-",
+                "HTP": "-",
+                "credito": "3",
+                "requisitos": [
+                    "MT318B"
+                ],
+                "Creditos requisitos": "0"
+            }
+        ]
+    },
+    {
+        "Periodo": "9",
+        "materias": [
+            {
+                "codigo": "SS-ELECTIVA AI",
+                "nombre": "ELECTIVA A",
+                "HT": "-",
+                "HP": "4",
+                "HTP": "-",
+                "credito": "4",
+                "requisitos": [
+                    ""
+                ],
+                "Creditos requisitos": "0"
+            },
+            {
+                "codigo": "SS-ELECTIVA BI",
+                "nombre": "ELECTIVA B",
+                "HT": "4",
+                "HP": "-",
+                "HTP": "-",
+                "credito": "4",
+                "requisitos": [
+                    ""
+                ],
+                "Creditos requisitos": "0"
+            },
+            {
+                "codigo": "SS556",
+                "nombre": "LEGISLACION DE SISTEMAS",
+                "HT": "2",
+                "HP": "-",
+                "HTP": "-",
+                "credito": "2",
+                "requisitos": [
+                    "SS430-A"
+                ],
+                "Creditos requisitos": "0"
+            },
+            {
+                "codigo": "EC114",
+                "nombre": "FORMULACION Y EVALUACION DE PROYECTOS",
+                "HT": "1",
+                "HP": "2",
+                "HTP": "-",
+                "credito": "3",
+                "requisitos": [
+                    "AI420"
+                ],
+                "Creditos requisitos": "0"
+            },
+            {
+                "codigo": "SS447",
+                "nombre": "PROYECTO DE GRADO I",
+                "HT": "2",
+                "HP": "-",
+                "HTP": "-",
+                "credito": "2",
+                "requisitos": [
+                    ""
+                ],
+                "Creditos requisitos": "120"
+            }
+        ]
+    },
+    {
+        "Periodo": "10",
+        "materias": [
+            {
+                "codigo": "SS449",
+                "nombre": "PROYECTO DE GRADO II",
+                "HT": "-",
+                "HP": "2",
+                "HTP": "-",
+                "credito": "2",
+                "requisitos": [
+                    "SS447"
+                ],
+                "Creditos requisitos": "0"
+            }
+        ]
+    }
+]
