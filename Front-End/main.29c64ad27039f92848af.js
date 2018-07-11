@@ -4967,7 +4967,7 @@
             var zi = function(t) {
                     return t[t.Important = 1] = "Important", t[t.DashCase = 2] = "DashCase", t
                 }(zi || (zi = {})),
-                qi = "http://localhost/pensum/Pensum",
+                qi = "http://localhost/pensum/Pensum", //cambiar direccion
                 Bi = function() {},
                 Gi = function() {
                     this.title = "app"

@@ -4967,7 +4967,7 @@
             var zl = function(t) {
                     return t[t.Important = 1] = "Important", t[t.DashCase = 2] = "DashCase", t
                 }(zl || (zl = {})),
-                ql = "http://unicesar.cf/pensum/",
+                ql = "http://localhost/pensum/Pensum", //cambiar direccion
                 Bl = function() {},
                 Gl = function() {
                     this.title = "app"
